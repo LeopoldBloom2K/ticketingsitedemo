@@ -1,12 +1,13 @@
 # 250829 - 첫 계획
-| 항목 | 기술 |
-|-----|-----|
-| Front-End | Vite + React + Ts  |
-| Back-End | Java |
-| DB |  |
-| App |  |
+| 항목 | 기술                |
+|-----|-------------------|
+| Front-End | Vite + React + Ts |
+| Back-End | Spring            |
+| DB | Mysql             |
+| App |                   |
 
 ---
 
 ## 9월 활동 내역
 - 로그인과 회원가입 페이지 생성
+    - 25.09.15 마감

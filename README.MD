@@ -26,12 +26,12 @@
 ## 🛠️ 기술 스택
 > 자세한 내용은 문서를 누르시면 각 항목의 세부사항을 확인할 수 있습니다
 
-| 항목 | 기술 | 문서 |
-|-----|-----|-----|
+| 항목 | 기술               | 문서 |
+|-----|------------------|-----|
 | Front-End | Vite + React + Ts | [Client](./client/README.md) |
-| Back-End | Java | [Server](./server/README.md) |
-| DB |  |
-| App |  | [App](./app/README.md) |
+| Back-End | Java             | [Server](./server/README.md) |
+| DB | MySQL            |
+| App | Flutter          | [App](./app/README.md) |
 
 ---
 
