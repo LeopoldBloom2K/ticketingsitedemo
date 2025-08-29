@@ -28,8 +28,8 @@
 
 | 항목 | 기술 | 문서 |
 |-----|-----|-----|
-| Front-End |  | [Client](./client/README.md) |
-| Back-End |  | [Server](./server/README.md) |
+| Front-End | Vite + React + Ts | [Client](./client/README.md) |
+| Back-End | Java | [Server](./server/README.md) |
 | DB |  |
 | App |  | [App](./app/README.md) |
 
