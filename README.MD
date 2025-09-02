@@ -32,6 +32,7 @@
 | Back-End | Java             | [Server](./server/README.md) |
 | DB | MySQL            |
 | App | Flutter          | [App](./app/README.md) |
+| Plans |  | [Plans](./docs/README.md) |
 
 ---
 

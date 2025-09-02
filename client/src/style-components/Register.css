@@ -1,5 +1,93 @@
+/* Register.css */
 .register {
-    width: 1200px;
-    margin: 40px auto;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+    background-color: #f9f9f9;
+}
+
+/* Register Options Container */
+.register-options {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.register-options h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Options List */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.option-btn:hover {
+    border-color: #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.option-btn span {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.option-btn.email {
+    color: #333;
+}
+
+.option-btn.google {
+    border-color: #E0E0E0;
+    color: #333;
+}
+
+.option-btn.naver {
+    border-color: #03C75A;
+    color: #fff;
+    background-color: #03C75A;
+}
+
+.option-btn.kakao {
+    background-color: #FEE500;
+    border-color: #FEE500;
+    color: #191919;
+}
+
+.option-btn.apple {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.option-btn svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
