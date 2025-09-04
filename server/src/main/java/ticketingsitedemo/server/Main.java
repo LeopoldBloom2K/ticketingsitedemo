@@ -1,5 +1,7 @@
 package ticketingsitedemo.server;
 
+import ticketingsitedemo.server.Domain.Member;
+
 import java.sql.*;
 
 public class Main {
@@ -12,7 +14,7 @@ public class Main {
         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM member");
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()){
-            var user = new ticketingsitedemo.server.Repository.Member(
+            var user = new Member(
                     resultSet.getLong("id"),
                     resultSet.getString("name"),
                     resultSet.getString("email"),

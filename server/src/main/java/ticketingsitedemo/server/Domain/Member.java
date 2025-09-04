@@ -1,4 +1,4 @@
-package ticketingsitedemo.server.Repository;
+package ticketingsitedemo.server.Domain;
 
 public class Member {
     private Long id;
