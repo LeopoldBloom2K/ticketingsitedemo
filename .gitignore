@@ -65,6 +65,7 @@ client/.cache/
 server/node_modules/
 server/dist/
 server/.env
+server/gradlew
 
 # ================================
 # 📱 app (React Native)
