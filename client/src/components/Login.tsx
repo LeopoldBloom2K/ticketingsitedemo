@@ -48,7 +48,7 @@ const Login = () => {
     }
 
     return (
-        //메인 컨테이너
+        // 메인 컨테이너
         <div className="Login">
             {/* 로그인 옵션 섹션 */}
             <div className="Login-options">

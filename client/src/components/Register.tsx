@@ -48,7 +48,7 @@ const Register = () => {
     }
 
     return (
-        //메인 컨테이너
+        // 메인 컨테이너
         <div className="register">
             {/* 회원가입 옵션 섹션 */}
             <div className="register-options">

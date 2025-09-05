@@ -1,0 +1,44 @@
+/* Footer Container */
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-self: center;
+}
+
+.footer-inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-link {
+  font-size: 1rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #1a73e8;
+}
+
+.footer-social {
+  /* 소셜 미디어 아이콘 스타일을 여기에 추가하세요 */
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
