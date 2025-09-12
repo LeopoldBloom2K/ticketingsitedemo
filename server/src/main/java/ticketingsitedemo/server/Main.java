@@ -1,6 +1,6 @@
 package ticketingsitedemo.server;
 
-import ticketingsitedemo.server.Domain.Member;
+import ticketingsitedemo.server.domain.Member;
 
 import java.sql.*;
 
