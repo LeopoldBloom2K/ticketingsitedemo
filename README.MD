@@ -30,7 +30,7 @@
 |-----|------------------|-----|
 | Front-End | Vite + React + Ts | [Client](./client/README.md) |
 | Back-End | Java             | [Server](./server/README.md) |
-| DB | MySQL            |
+| DB | MySQL            | [DataBase](./server/README-database.md) |
 | App | Flutter          | [App](./app/README.md) |
 | Plans |  | [Plans](./docs/README.md) |
 
