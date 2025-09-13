@@ -3,6 +3,7 @@ package ticketingsitedemo.server;
 import jakarta.persistence.*;
 import lombok.Data;
 
+@Entity
 @Data
 public class Member {
     @Id
@@ -10,5 +11,4 @@ public class Member {
     private Long id;
     private String name;
     private String email;
-    private String role;
 }

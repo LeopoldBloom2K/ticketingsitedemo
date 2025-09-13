@@ -5,7 +5,6 @@
 
 <mapper namespace="ticketingsitedemo.server.MemberMapper">
 
-    <!--select-->
     <select id="findAll" resultType="ticketingsitedemo.server.Member">
         SELECT * FROM member
     </select>
@@ -15,9 +14,8 @@
     </select>
 
 
-    <!--insert-->
-    <insert id="insert" parameterType="com.ticketingsitedemo.domain.Member" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO member(username, email, role)
-        VALUES(#{username}, #{email}, #{role})
+    <insert id="insert" parameterType="ticketingsitedemo.server.Member" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO member(name, email)
+        VALUES(#{name}, #{email})
     </insert>
 </mapper>

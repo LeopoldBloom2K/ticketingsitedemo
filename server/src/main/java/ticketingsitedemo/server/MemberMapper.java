@@ -12,14 +12,13 @@ public interface MemberMapper {
     @Select("SELECT * FROM member WHERE id = #{id}")
     Member findById(Long id);
 
-    @Insert("INSERT INTO member(username, email) VALUES(#{username}, #{email}")
+    @Insert("INSERT INTO member(name, email) VALUES(#{name}, #{email})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(Member member);
 
-    @Update("UPDATE member SET username=#{username}, email=#{email} WHERE id=#{id}")
+    @Update("UPDATE member SET name=#{name}, email=#{email} WHERE id=#{id}")
     void update(Member member);
 
     @Delete("DELETE FROM member WHERE id=#{id}")
     void delete(Long id);
 }
-

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("ticketingsitedemo.server.mapper")
+@MapperScan("ticketingsitedemo.mapper")
 public class ServerApplication {
 
     public static void main(String[] args) {
