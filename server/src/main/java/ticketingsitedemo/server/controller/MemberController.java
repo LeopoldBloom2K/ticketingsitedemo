@@ -1,6 +1,8 @@
-package ticketingsitedemo.server;
+package ticketingsitedemo.server.controller;
 
 import org.springframework.web.bind.annotation.*;
+import ticketingsitedemo.server.domain.Member;
+import ticketingsitedemo.server.mapper.MemberMapper;
 
 import java.util.List;
 

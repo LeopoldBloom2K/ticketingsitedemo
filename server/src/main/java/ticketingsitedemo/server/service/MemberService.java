@@ -1,6 +1,8 @@
-package ticketingsitedemo.server;
+package ticketingsitedemo.server.service;
 
 import org.springframework.stereotype.Service;
+import ticketingsitedemo.server.domain.Member;
+import ticketingsitedemo.server.repository.MemberRepository;
 
 import java.util.List;
 
