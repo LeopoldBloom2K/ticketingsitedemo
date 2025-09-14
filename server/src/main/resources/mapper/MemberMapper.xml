@@ -13,7 +13,6 @@
         SELECT * FROM member WHERE id = #{id}
     </select>
 
-
     <insert id="insert" parameterType="ticketingsitedemo.server.domain.Member" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO member(name, email)
         VALUES(#{name}, #{email})
