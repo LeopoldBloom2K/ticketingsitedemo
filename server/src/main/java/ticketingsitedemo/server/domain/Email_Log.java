@@ -20,7 +20,7 @@ public class Email_Log {
     private User user;
 
     // Ticket
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 

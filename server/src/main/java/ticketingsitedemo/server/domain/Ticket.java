@@ -15,12 +15,12 @@ public class Ticket {
     private Long ticket_id;
 
     // ticket 이 event 테이블 참조
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "event_id")
     private Event event;
 
     // user -> ticket
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

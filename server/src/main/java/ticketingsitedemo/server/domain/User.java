@@ -26,7 +26,7 @@ public class User {
 
 
     // event 에게 데이터 넘겨줌
-    @OneToMany(mappedBy= "user")
+    @OneToMany(mappedBy= "host")
     private List<Event> event;
 
     // ticket 에게 데이터 넘겨줌
