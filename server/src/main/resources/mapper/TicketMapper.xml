@@ -5,6 +5,6 @@
 
 <mapper namespace="ticketingsitedemo.server.mapper.TicketMapper">
     <select id="findAll" resultType="ticketingsitedemo.server.domain.Ticket">
-        SELECT * FROM Users
+        SELECT * FROM ticket
     </select>
 </mapper>

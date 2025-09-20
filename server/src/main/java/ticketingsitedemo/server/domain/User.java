@@ -1,4 +1,3 @@
-// User.java
 package ticketingsitedemo.server.domain;
 
 import jakarta.persistence.*;
@@ -26,7 +25,7 @@ public class User {
 
 
     // event 에게 데이터 넘겨줌
-    @OneToMany(mappedBy= "host")
+    @OneToMany(mappedBy= "host") // mappedBy 값을 "host"로 수정
     private List<Event> event;
 
     // ticket 에게 데이터 넘겨줌

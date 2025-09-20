@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name="member")   // 테이블 이름 지정
+@Table(name="member")
 @Data
 public class Member {
     @Id
@@ -12,10 +12,8 @@ public class Member {
     private Long id;
     private String name;
     private String email;
-    private Integer age;
+    private Integer age; // age 필드 추가
 
-
-    // lombok setter 메서드 연결 오류로 따로 지정
     public void setId(Long id) {
         this.id = id;
     }
