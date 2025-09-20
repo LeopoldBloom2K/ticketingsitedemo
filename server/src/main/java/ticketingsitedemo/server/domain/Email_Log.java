@@ -14,13 +14,11 @@ public class Email_Log {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long email_id;
 
-    // e_l가 user 테이블 참조
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    // Ticket
-    @ManyToOne
+    @ManyToOne // 관계를 다대일로 수정
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 
@@ -29,6 +27,5 @@ public class Email_Log {
     private Timestamp sent_at;
 
     @Enumerated(EnumType.STRING)
-    private Email_LogStatusMethod email_logStatusMethod;    // SENT FAILED
-
+    private Email_LogStatusMethod email_logStatusMethod;
 }

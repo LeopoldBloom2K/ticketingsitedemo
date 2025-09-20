@@ -1,4 +1,3 @@
-// Ticket.java
 package ticketingsitedemo.server.domain;
 
 import jakarta.persistence.*;
@@ -14,13 +13,11 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ticket_id;
 
-    // ticket 이 event 테이블 참조
-    @ManyToOne
+    @ManyToOne // 관계를 다대일로 수정
     @JoinColumn(name = "event_id")
     private Event event;
 
-    // user -> ticket
-    @ManyToOne
+    @ManyToOne // 관계를 다대일로 수정
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -30,7 +27,6 @@ public class Ticket {
     private String qr_code;
     private Timestamp created_at;
 
-    // payment 에 데이터 넘겨줌
     @OneToOne(mappedBy = "ticket", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Payment payment;
 }
