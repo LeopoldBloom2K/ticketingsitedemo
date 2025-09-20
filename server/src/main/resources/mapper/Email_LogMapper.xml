@@ -5,6 +5,6 @@
 
 <mapper namespace="ticketingsitedemo.server.mapper.Email_LogMapper">
     <select id="findAll" resultType="ticketingsitedemo.server.domain.Email_Log">
-        SELECT * FROM Users
+        SELECT * FROM email_log
     </select>
 </mapper>

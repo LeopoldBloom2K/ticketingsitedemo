@@ -5,6 +5,6 @@
 
 <mapper namespace="ticketingsitedemo.server.mapper.Host_ApplicationMapper">
     <select id="findAll" resultType="ticketingsitedemo.server.domain.Host_Application">
-        SELECT * FROM Users
+        SELECT * FROM host_application
     </select>
 </mapper>
