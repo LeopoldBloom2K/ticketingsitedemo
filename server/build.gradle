@@ -39,6 +39,9 @@ dependencies {
     // MySQL 드라이버
     runtimeOnly 'com.mysql:mysql-connector-j'
 
+    // .env 사용
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+
     // Lombok
     compileOnly 'org.projectlombok:lombok'
 
