@@ -72,9 +72,9 @@ const Login = () => {
                 </form>
 
                 <div className="form-links">
-                    <a href="#">아이디 찾기</a>
+                    <a href="/find-id">아이디 찾기</a>
                     <span>|</span>
-                    <a href="#">비밀번호 재설정하기</a>
+                    <a href="/reset-password">비밀번호 재설정하기</a>
                 </div>
             </div>
         </div>

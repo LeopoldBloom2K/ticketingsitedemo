@@ -1,0 +1,63 @@
+.find-id-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 128px);
+    background-color: #e6e0f8;
+}
+
+.find-id-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.find-id-box h2 {
+    margin-bottom: 20px;
+}
+
+.find-id-box p {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c4b5fd;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 15px;
+    text-decoration: none; /* a 태그용 */
+    display: inline-block; /* a 태그용 */
+    box-sizing: border-box; /* a 태그용 */
+}
+
+.submit-btn:hover {
+    background-color: #a78bfa;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.result-box .found-email {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #a78bfa;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
