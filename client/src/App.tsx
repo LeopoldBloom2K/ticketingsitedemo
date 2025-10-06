@@ -4,8 +4,6 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import EmailRagister from "./components/EmailRagister";
-import EmailLogin from "./components/EmailLogin";
 
 const App = () => {
     return (
@@ -18,8 +16,6 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/register/email" element={<EmailRagister />} />
-                    <Route path="/login/email" element={<EmailLogin />} />
                     {/* Add other routes here */}
                 </Routes>
             </div>

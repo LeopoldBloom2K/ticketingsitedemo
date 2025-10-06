@@ -1,93 +1,186 @@
-/* Register.css */
-.register {
+/* 전체 회원가입 페이지 컨테이너 */
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 64px);
-    background-color: #f9f9f9;
+    min-height: 100vh;
+    background-color: #e6e0f8;
+    padding: 20px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
 }
 
-/* Register Options Container */
-.register-options {
+/* 흰색 회원가입 박스 */
+.register-box {
     width: 100%;
-    max-width: 400px;
-    padding: 40px;
+    max-width: 420px;
+    padding: 40px 50px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.register-options h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 600;
+/* 소셜 회원가입 섹션 */
+.social-register h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-/* Options List */
-.options-list {
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden;
+    padding: 0;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.social-btn.naver {
+    background-color: #03C75A;
+    border: none;
+    color: white;
+}
+.social-btn.kakao {
+    background-color: #FEE500;
+    border: none;
+}
+.social-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* OR 구분선 */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.divider::before, .divider::after {
+    content: ''; flex: 1; border-bottom: 1px solid #eee;
+}
+.divider:not(:empty)::before { margin-right: .25em; }
+.divider:not(:empty)::after { margin-left: .25em; }
+
+
+/* 입력 폼 */
+.register-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.option-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background-color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.option-btn:hover {
-    border-color: #aaa;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.option-btn span {
-    flex-grow: 1;
+.input-group {
     text-align: left;
-    padding-left: 10px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.input-group input:focus {
+    outline: none;
+    border-color: #a78bfa;
+}
+/* 입력창 비활성화 스타일 */
+.input-group input:disabled {
+    background-color: #f8f9fa;
+    color: #adb5bd;
 }
 
-.option-btn.email {
-    color: #333;
+/* 입력창과 버튼을 함께 묶는 스타일 */
+.input-with-button {
+    display: flex;
+    gap: 10px;
+}
+.input-with-button input {
+    flex-grow: 1;
+}
+.input-with-button button {
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+.input-with-button button:hover {
+    background-color: #e0e0e0;
+}
+.input-with-button button:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+    color: #adb5bd;
 }
 
-.option-btn.google {
-    border-color: #E0E0E0;
-    color: #333;
+
+/* 메인 회원가입 버튼 */
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c4b5fd;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 15px;
 }
 
-.option-btn.naver {
-    border-color: #03C75A;
-    color: #fff;
-    background-color: #03C75A;
+.register-btn:hover {
+    background-color: #a78bfa;
 }
 
-.option-btn.kakao {
-    background-color: #FEE500;
-    border-color: #FEE500;
-    color: #191919;
+/* 하단 링크 */
+.form-links {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #888;
 }
-
-.option-btn.apple {
-    background-color: #000;
-    border-color: #000;
-    color: #fff;
+.form-links a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
 }
-
-.option-btn svg {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+.form-links a:hover {
+    text-decoration: underline;
 }

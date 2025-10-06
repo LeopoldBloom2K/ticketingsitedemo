@@ -1,93 +1,166 @@
-/* Login.css */
-.Login {
+/* 전체 로그인 페이지 컨테이너 */
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 64px);
-    background-color: #f9f9f9;
+    min-height: 85vh;
+    background-color: #e6e0f8; /* 연한 보라색 배경 */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Login Options Container */
-.Login-options {
+/* 흰색 로그인 박스 */
+.login-box {
     width: 100%;
-    max-width: 400px;
-    padding: 40px;
+    max-width: 420px;
+    padding: 40px 50px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.Login-options h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 600;
+/* 소셜 로그인 섹션 */
+.social-login h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-/* Options List */
-.options-list {
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden; /* 아이콘이 원 밖으로 나가지 않게 */
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.social-btn.naver {
+    background-color: #03C75A;
+    border: none;
+}
+.social-btn.naver svg {
+    width: 100%;
+    height: 100%;
+}
+.social-btn.kakao {
+    background-color: #FEE500;
+    border: none;
+}
+
+
+/* OR 구분선 */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .25em;
+}
+
+
+/* 아이디/비밀번호 입력 폼 */
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.option-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    background-color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.option-btn:hover {
-    border-color: #aaa;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.option-btn span {
-    flex-grow: 1;
+.input-group {
     text-align: left;
-    padding-left: 10px;
 }
 
-.option-btn.email {
-    color: #333;
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
 }
 
-.option-btn.google {
-    border-color: #E0E0E0;
-    color: #333;
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
-.option-btn.naver {
-    border-color: #03C75A;
-    color: #fff;
-    background-color: #03C75A;
+.input-group input:focus {
+    outline: none;
+    border-color: #a78bfa; /* 포커스 시 보라색 테두리 */
 }
 
-.option-btn.kakao {
-    background-color: #FEE500;
-    border-color: #FEE500;
-    color: #191919;
+/* 메인 로그인 버튼 */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c4b5fd; /* 연한 보라색 버튼 */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 15px;
 }
 
-.option-btn.apple {
-    background-color: #000;
-    border-color: #000;
-    color: #fff;
+.login-btn:hover {
+    background-color: #a78bfa; /* 호버 시 진한 보라색 */
 }
 
-.option-btn svg {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+/* 하단 링크 */
+.form-links {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.form-links a {
+    color: #888;
+    text-decoration: none;
+}
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+.form-links span {
+    color: #ddd;
+    margin: 0 10px;
 }
