@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // useState를 import에 추가
 import { Link, useNavigate } from 'react-router-dom';
 import '../style-components/Header.css';
 
-const Header = () => {
+// App.tsx로부터 isLoggedIn과 handleLogout을 props로 받음
+const Header = ({ isLoggedIn, handleLogout }: { isLoggedIn: boolean, handleLogout: () => void }) => {
     const [keyword, setKeyword] = useState('');
     const navigate = useNavigate();
 
@@ -12,18 +13,19 @@ const Header = () => {
             navigate(`/search?query=${encodeURIComponent(keyword)}`);
         }
     };
+    
+    // 로그아웃 시 navigate를 추가
+    const onLogout = () => {
+        handleLogout();
+        navigate('/');
+    };
 
     return (
-        /* Header setting */
         <header className="header">
-            {/* Header inner setting */}
             <div className="header-inner">
-                {/* 좌측 로고 */}
                 <Link to ="/" className="logo">
                     Ticket
                 </Link>
-
-                {/* Search bar */}
                 <form className="search" onSubmit={handleSearch}>
                     <input
                         type="text"
@@ -35,12 +37,19 @@ const Header = () => {
                         검색
                     </button>
                 </form>
-
-                {/* Navigation */}
                 <nav className="nav">
                     <Link to="/events" className="nav-link">이벤트</Link>
-                    <Link to="/Login" className="nav-link">로그인</Link>
-                    <Link to="/register" className="nav-link">회원가입</Link>
+                    {isLoggedIn ? (
+                        <>
+                            <Link to="/mypage" className="nav-link">마이페이지</Link>
+                            <button onClick={onLogout} className="nav-link-button">로그아웃</button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login" className="nav-link">로그인</Link>
+                            <Link to="/register" className="nav-link">회원가입</Link>
+                        </>
+                    )}
                 </nav>
             </div>
         </header>
