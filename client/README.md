@@ -12,6 +12,15 @@
 
 ---
 
+## 실행 필수 라이브러리
+```
+npm install axios
+npm install react
+npm install react-router-dom
+```
+
+---
+
 ## 실행방법
 ```
 npm install
