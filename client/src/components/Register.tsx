@@ -95,7 +95,7 @@ const Register = () => {
 
     // 소셜 회원가입 버튼 클릭 핸들러
     const handleSocialRegister = (provider: string) => {
-        alert(`${provider}로 회원가입 기능은 현재 준비 중입니다.`);
+        window.location.href = `http://localhost:8080/oauth2/authorization/${provider}`;
     };
 
     return (

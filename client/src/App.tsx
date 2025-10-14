@@ -8,6 +8,7 @@ import Register from "./components/Register";
 import FindId from "./components/FindId";
 import FindPassword from "./components/RequestPasswordReset";
 import ConfirmPasswordReset from "./components/ConfirmPasswordReset";
+import OAuthRedirectPage from "./components/OAuthRedirectPage";
 
 const App = () => {
     // 1. 로그인 상태를 App 컴포넌트에서 관리
@@ -43,7 +44,7 @@ const App = () => {
                     <Route path="/register" element={<Register />} />
                     {/* Login에 로그인 처리 함수를 props로 전달 */}
                     <Route path="/login" element={<Login handleLogin={handleLogin} />} />
-
+                    <Route path="/oauth2/redirect" element={<OAuthRedirectPage handleLogin={handleLogin} />} />
                     <Route path="/find-id" element={<FindId />} />
                     <Route path="/reset-password" element={<FindPassword />} />
                     <Route path="/confirm-password-reset/:token" element={<ConfirmPasswordReset />} />
