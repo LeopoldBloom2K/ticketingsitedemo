@@ -25,15 +25,31 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
         OAuth2User oAuth2User = super.loadUser(userRequest);
 
-        // 소셜 서비스에서 제공하는 사용자 정보 (attributes)
-        Map<String, Object> attributes = oAuth2User.getAttributes();
-        String email = (String) attributes.get("email");
-        String name = (String) attributes.get("name");
+        // 소셜 서비스 구분 (google, naver, kakao)
+        String registrationId = userRequest.getClientRegistration().getRegistrationId();
+
+        // 소셜 서비스 별로 사용자 정보 파싱
+        String email;
+        String name;
+
+        if (registrationId.equals("naver")) {
+            Map<String, Object> response = (Map<String, Object>) oAuth2User.getAttributes().get("response");
+            email = (String) response.get("email");
+            name = (String) response.get("name");
+        } else if (registrationId.equals("kakao")) {
+            Map<String, Object> kakaoAccount = (Map<String, Object>) oAuth2User.getAttributes().get("kakao_account");
+            Map<String, Object> profile = (Map<String, Object>) kakaoAccount.get("profile");
+            email = (String) kakaoAccount.get("email");
+            name = (String) profile.get("name");
+        } else {    // google
+            email = oAuth2User.getAttribute("email");
+            name = oAuth2User.getAttribute("name");
+        }
 
         // DB에서 이메일로 사용자 조회
         Optional<User> userOptional = Optional.ofNullable(userRepository.findByEmail(email));
-
         User user;
+
         if (userOptional.isPresent()) {
             // 이미 가입된 사용자인 경우, 정보 업데이트 (선택적)
             user = userOptional.get();
