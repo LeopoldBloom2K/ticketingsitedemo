@@ -50,3 +50,23 @@
   color: #888;
   margin: 0;
 }
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #1a1a2e;
+    border-top-color: #374151;
+  }
+
+  .footer-link {
+    color: #d1d5db;
+  }
+
+  .footer-link:hover {
+    color: #818cf8;
+  }
+
+  .footer-copy {
+    color: #9ca3af;
+  }
+}

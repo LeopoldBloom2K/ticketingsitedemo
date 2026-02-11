@@ -2,8 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 128px);
+    min-height: calc(100vh - 64px);
     background-color: #e6e0f8;
+    padding: 20px 20px 130px;
+    box-sizing: border-box;
 }
 
 .find-id-box {
@@ -37,9 +39,9 @@
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 15px;
-    text-decoration: none; /* a 태그용 */
-    display: inline-block; /* a 태그용 */
-    box-sizing: border-box; /* a 태그용 */
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .submit-btn:hover {
@@ -60,4 +62,33 @@
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 8px;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+    .find-id-container {
+        background-color: #1e1b4b;
+    }
+
+    .find-id-box {
+        background-color: #1f2937;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .find-id-box h2 {
+        color: #f9fafb;
+    }
+
+    .find-id-box p {
+        color: #d1d5db;
+    }
+
+    .error-message {
+        color: #fc8181;
+    }
+
+    .result-box .found-email {
+        background-color: #374151;
+        color: #a78bfa;
+    }
 }

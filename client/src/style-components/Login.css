@@ -3,9 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 85vh;
-    background-color: #e6e0f8; /* 연한 보라색 배경 */
-    padding: 20px;
+    min-height: calc(100vh - 64px);
+    background-color: #e6e0f8;
+    padding: 20px 20px 130px;
     box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s;
-    overflow: hidden; /* 아이콘이 원 밖으로 나가지 않게 */
+    overflow: hidden;
 }
 
 .social-btn:hover {
@@ -120,11 +120,13 @@
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: #fff;
+    color: #213547;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #a78bfa; /* 포커스 시 보라색 테두리 */
+    border-color: #a78bfa;
 }
 
 /* 메인 로그인 버튼 */
@@ -133,7 +135,7 @@
     padding: 14px;
     border: none;
     border-radius: 8px;
-    background-color: #c4b5fd; /* 연한 보라색 버튼 */
+    background-color: #c4b5fd;
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -143,7 +145,7 @@
 }
 
 .login-btn:hover {
-    background-color: #a78bfa; /* 호버 시 진한 보라색 */
+    background-color: #a78bfa;
 }
 
 /* 하단 링크 */
@@ -163,4 +165,56 @@
 .form-links span {
     color: #ddd;
     margin: 0 10px;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+    .login-container {
+        background-color: #1e1b4b;
+    }
+
+    .login-box {
+        background-color: #1f2937;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-login h3 {
+        color: #d1d5db;
+    }
+
+    .social-btn {
+        border-color: #374151;
+        background-color: #374151;
+    }
+
+    .divider {
+        color: #6b7280;
+    }
+
+    .divider::before,
+    .divider::after {
+        border-bottom-color: #374151;
+    }
+
+    .input-group label {
+        color: #d1d5db;
+    }
+
+    .input-group input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .input-group input:focus {
+        border-color: #818cf8;
+    }
+
+    .form-links a {
+        color: #9ca3af;
+    }
+
+    .form-links span {
+        color: #4b5563;
+    }
 }

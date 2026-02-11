@@ -43,6 +43,8 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
+  background-color: #fff;
+  color: #213547;
 }
 
 .search-button {
@@ -62,6 +64,7 @@
 /* Navigation */
 .nav {
   display: flex;
+  align-items: center;
   gap: 32px;
   margin-left: auto;
 }
@@ -90,4 +93,38 @@
 }
 .nav-link-button:hover {
     color: #1a73e8;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: #1a1a2e;
+    border-bottom-color: #374151;
+  }
+
+  .search input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #e5e7eb;
+  }
+
+  .search-button {
+    color: #e5e7eb;
+  }
+
+  .nav a {
+    color: #d1d5db;
+  }
+
+  .nav a:hover {
+    color: #818cf8;
+  }
+
+  .nav-link-button {
+    color: #d1d5db;
+  }
+
+  .nav-link-button:hover {
+    color: #818cf8;
+  }
 }

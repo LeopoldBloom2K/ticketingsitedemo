@@ -3,10 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     background-color: #e6e0f8;
-    padding: 20px;
-    padding-bottom: 80px;
+    padding: 20px 20px 140px;
     box-sizing: border-box;
 }
 
@@ -111,6 +110,8 @@
     border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: #fff;
+    color: #213547;
 }
 .input-group input:focus {
     outline: none;
@@ -183,4 +184,72 @@
 }
 .form-links a:hover {
     text-decoration: underline;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+    .register-container {
+        background-color: #1e1b4b;
+    }
+
+    .register-box {
+        background-color: #1f2937;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-register h3 {
+        color: #d1d5db;
+    }
+
+    .social-btn {
+        border-color: #374151;
+        background-color: #374151;
+    }
+
+    .divider {
+        color: #6b7280;
+    }
+
+    .divider::before,
+    .divider::after {
+        border-bottom-color: #374151;
+    }
+
+    .input-group label {
+        color: #d1d5db;
+    }
+
+    .input-group input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .input-group input:focus {
+        border-color: #818cf8;
+    }
+
+    .input-group input:disabled {
+        background-color: #2d3748;
+        color: #6b7280;
+    }
+
+    .input-with-button button {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .input-with-button button:hover {
+        background-color: #4b5563;
+    }
+
+    .input-with-button button:disabled {
+        background-color: #2d3748;
+        color: #6b7280;
+    }
+
+    .form-links {
+        color: #9ca3af;
+    }
 }
