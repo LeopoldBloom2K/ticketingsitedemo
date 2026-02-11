@@ -43,11 +43,13 @@ public class SecurityConfig {
         http
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .csrf(csrf -> csrf.disable())
+                .formLogin(form -> form.disable())          // 기본 로그인 폼 비활성화
+                .httpBasic(httpBasic -> httpBasic.disable()) // HTTP 인증 건너뜀
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 // OPTIONS 메서드에 대한 사전 요청(preflight)은 모두 허용
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .requestMatchers("/auth/**").permitAll()
+                .requestMatchers("/auth/**", "/oauth2/**").permitAll()
                 .anyRequest().authenticated()
             )
             .oauth2Login(oauth2 -> oauth2
