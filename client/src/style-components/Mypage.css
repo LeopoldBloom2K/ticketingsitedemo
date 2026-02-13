@@ -1,0 +1,497 @@
+/* 마이페이지 컨테이너 */
+.mypage-container {
+    min-height: calc(100vh - 174px);
+    background-color: #e6e0f8;
+}
+
+/* 상단 배너 */
+.mypage-banner {
+    height: 180px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 30%, #c4b5fd 60%, #7c3aed 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(255,255,255,0.08) 0%, transparent 30%);
+}
+
+.banner-title {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* 2컬럼 레이아웃 */
+.mypage-content {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: -50px auto 0;
+    padding: 0 40px 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 왼쪽 사이드바 */
+.mypage-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.1), 0 2px 10px rgba(0, 0, 0, 0.04);
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+.profile-name {
+    margin: 18px 0 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.profile-role {
+    display: inline-block;
+    padding: 5px 18px;
+    background: linear-gradient(135deg, #ede9fe, #f3e8ff);
+    color: #7c3aed;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 프로필 상세정보 */
+.profile-details {
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #ede9fe;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b7280;
+    font-size: 14px;
+    text-align: left;
+}
+
+.detail-item svg {
+    color: #a78bfa;
+    flex-shrink: 0;
+}
+
+.detail-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 액션 버튼 */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 24px;
+    margin-top: 24px;
+    border: 2px solid #ede9fe;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border-color: #7c3aed;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
+}
+
+.action-btn-cancel {
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+.action-btn-cancel:hover {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border-color: #dc2626;
+    color: white;
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.25);
+}
+
+/* 비밀번호 변경 폼 */
+.password-form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    background-color: #faf9ff;
+    border: 1px solid #ede9fe;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.password-form .input-group {
+    text-align: left;
+}
+
+.password-form .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.password-form .input-group input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    color: #1f2937;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.password-form .input-group input::placeholder {
+    color: #c4b5fd;
+    font-size: 12px;
+}
+
+.password-form .input-group input:focus {
+    outline: none;
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* 오른쪽 메인 영역 */
+.mypage-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.main-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(124, 58, 237, 0.1), 0 2px 10px rgba(0, 0, 0, 0.04);
+    padding: 36px;
+    min-height: 300px;
+}
+
+/* 섹션 헤더 */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #7c3aed;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #ede9fe;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* 빈 상태 */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #faf9ff;
+    border: 2px dashed #d8d0f0;
+    border-radius: 16px;
+    color: #b4a7d6;
+}
+
+.empty-message {
+    margin-top: 14px;
+    font-size: 15px;
+    color: #9ca3af;
+}
+
+/* 신청 리스트 */
+.application-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background-color: #faf9ff;
+    border: 1px solid #ede9fe;
+    border-radius: 14px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.application-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.1);
+}
+
+.application-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.application-reason {
+    font-size: 15px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.application-date {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.application-status {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.status-approved {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+.status-rejected {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+    .mypage-container {
+        background-color: #1e1b4b;
+    }
+
+    .mypage-banner {
+        background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 30%, #5b21b6 60%, #8b5cf6 100%);
+    }
+
+    .profile-card {
+        background-color: #1f2937;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-avatar {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .profile-name {
+        color: #f3f4f6;
+    }
+
+    .profile-role {
+        background: linear-gradient(135deg, #4c1d95, #5b21b6);
+        color: #c4b5fd;
+    }
+
+    .profile-details {
+        border-top-color: #374151;
+    }
+
+    .detail-item {
+        color: #9ca3af;
+    }
+
+    .detail-item svg {
+        color: #8b5cf6;
+    }
+
+    .action-btn {
+        background-color: #1f2937;
+        border-color: #374151;
+        color: #c4b5fd;
+    }
+
+    .action-btn:hover {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        border-color: #7c3aed;
+        color: white;
+    }
+
+    .action-btn-cancel {
+        border-color: #7f1d1d;
+        color: #fca5a5;
+    }
+
+    .action-btn-cancel:hover {
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        border-color: #dc2626;
+    }
+
+    .password-form {
+        background-color: #283141;
+        border-color: #374151;
+    }
+
+    .password-form .input-group label {
+        color: #9ca3af;
+    }
+
+    .password-form .input-group input {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .password-form .input-group input::placeholder {
+        color: #6b7280;
+    }
+
+    .password-form .input-group input:focus {
+        border-color: #818cf8;
+        box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+    }
+
+    .submit-btn {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    }
+
+    .submit-btn:hover {
+        background: linear-gradient(135deg, #6d28d9, #5b21b6);
+    }
+
+    .main-card {
+        background-color: #1f2937;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header {
+        color: #a78bfa;
+        border-bottom-color: #374151;
+    }
+
+    .section-title {
+        color: #f3f4f6;
+    }
+
+    .empty-state {
+        background-color: #283141;
+        border-color: #4c1d95;
+        color: #6b7280;
+    }
+
+    .empty-message {
+        color: #6b7280;
+    }
+
+    .application-item {
+        background-color: #283141;
+        border-color: #374151;
+    }
+
+    .application-item:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .application-reason {
+        color: #e5e7eb;
+    }
+
+    .application-date {
+        color: #6b7280;
+    }
+
+    .status-pending {
+        background-color: #78350f;
+        color: #fcd34d;
+    }
+
+    .status-approved {
+        background-color: #064e3b;
+        color: #6ee7b7;
+    }
+
+    .status-rejected {
+        background-color: #7f1d1d;
+        color: #fca5a5;
+    }
+}

@@ -83,13 +83,13 @@ const upcomingEvents: Event[] = [
 const categories = [
   { name: "콘서트", icon: "🎤" },
   { name: "뮤지컬", icon: "🎭" },
-  { name: "클래식·오케스트라", icon: "🎻" },
+  { name: "클래식", icon: "🎻" },
   { name: "연극", icon: "🎬" },
   { name: "페스티벌", icon: "🎪" },
 ];
 
 const EventCard = ({ event }: { event: Event }) => (
-  <div className="event-card">
+  <Link to={`/events/${event.id}`} className="event-card">
     <div className="event-card-image">
       <span className="event-card-category">{event.category}</span>
     </div>
@@ -99,7 +99,7 @@ const EventCard = ({ event }: { event: Event }) => (
       <p className="event-card-location">{event.location}</p>
       <p className="event-card-price">{event.price}</p>
     </div>
-  </div>
+  </Link>
 );
 
 const Home = () => {

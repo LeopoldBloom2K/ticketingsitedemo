@@ -1,0 +1,362 @@
+/* ===== 이벤트 상세 페이지 ===== */
+.detail-page {
+    min-height: calc(100vh - 174px);
+    background-color: #f3f0ff;
+}
+
+/* 배너 */
+.detail-banner {
+    height: 260px;
+    background: linear-gradient(135deg, #646cff 0%, #4338ca 50%, #1e1b4b 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-banner-pattern {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(255,255,255,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(255,255,255,0.08) 0%, transparent 40%);
+}
+
+.detail-banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.detail-category {
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    backdrop-filter: blur(4px);
+}
+
+.detail-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+.detail-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 컨테이너 */
+.detail-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 40px 60px;
+}
+
+/* 뒤로 가기 */
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: color 0.2s;
+}
+
+.detail-back:hover {
+    color: #6d28d9;
+}
+
+/* 2컬럼 레이아웃 */
+.detail-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* 왼쪽 메인 */
+.detail-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 32px;
+}
+
+.detail-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 18px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #ede9fe;
+}
+
+.detail-description {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* 공연 정보 그리드 */
+.detail-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detail-info-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background-color: #faf9ff;
+    border: 1px solid #ede9fe;
+    border-radius: 14px;
+}
+
+.detail-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ede9fe, #e0d4fc);
+    color: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-info-label {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.detail-info-value {
+    display: block;
+    font-size: 15px;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* 오른쪽 사이드바 */
+.detail-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.booking-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+}
+
+.booking-price-label {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.booking-price {
+    font-size: 32px;
+    font-weight: 800;
+    color: #7c3aed;
+    margin-bottom: 20px;
+}
+
+.booking-divider {
+    height: 1px;
+    background-color: #ede9fe;
+    margin-bottom: 20px;
+}
+
+.booking-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.booking-info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.booking-info-row span:first-child {
+    color: #9ca3af;
+}
+
+.booking-info-row span:last-child {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.booking-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.booking-btn:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+/* 404 */
+.detail-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 174px);
+    gap: 20px;
+}
+
+.detail-not-found h2 {
+    font-size: 24px;
+    color: #6b7280;
+}
+
+.back-link {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* ===== 다크 모드 ===== */
+@media (prefers-color-scheme: dark) {
+    .detail-page {
+        background-color: #1e1b4b;
+    }
+
+    .detail-banner {
+        background: linear-gradient(135deg, #4c1d95 0%, #3730a3 50%, #1e1b4b 100%);
+    }
+
+    .detail-back {
+        color: #a78bfa;
+    }
+
+    .detail-back:hover {
+        color: #c4b5fd;
+    }
+
+    .detail-card {
+        background-color: #1f2937;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .detail-section-title {
+        color: #f3f4f6;
+        border-bottom-color: #374151;
+    }
+
+    .detail-description {
+        color: #9ca3af;
+    }
+
+    .detail-info-item {
+        background-color: #283141;
+        border-color: #374151;
+    }
+
+    .detail-info-icon {
+        background: linear-gradient(135deg, #4c1d95, #5b21b6);
+        color: #c4b5fd;
+    }
+
+    .detail-info-label {
+        color: #6b7280;
+    }
+
+    .detail-info-value {
+        color: #e5e7eb;
+    }
+
+    .booking-card {
+        background-color: #1f2937;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .booking-price-label {
+        color: #6b7280;
+    }
+
+    .booking-price {
+        color: #a78bfa;
+    }
+
+    .booking-divider {
+        background-color: #374151;
+    }
+
+    .booking-info-row span:first-child {
+        color: #6b7280;
+    }
+
+    .booking-info-row span:last-child {
+        color: #e5e7eb;
+    }
+
+    .booking-btn {
+        background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    }
+
+    .booking-btn:hover {
+        background: linear-gradient(135deg, #6d28d9, #5b21b6);
+    }
+
+    .detail-not-found h2 {
+        color: #9ca3af;
+    }
+}
