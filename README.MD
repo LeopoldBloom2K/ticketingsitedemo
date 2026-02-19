@@ -42,7 +42,7 @@
 
 ## 📂 디렉토리 구조
 
-```
+```text
 WorshipLog/
 ├── client/         #프론트엔드
 ├── server/         #백엔드
